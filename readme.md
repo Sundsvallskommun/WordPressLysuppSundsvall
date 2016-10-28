@@ -5,8 +5,9 @@ Sidan är byggd i WordPress och temat är byggt för version 4.3.1. Det bör int
 ## 1. Installation
 1. Ladda ner allt från GitHub.
 2. Sätt upp en webbserver. Vi kör med PHP (v5.5.38) och MySQL.
-3. Sätt upp de extra tabellerna som behövs enligt instruktioner nedan.
-4. Installera WordPress enligt instruktioner.
+3. Installera WordPress enligt instruktioner.
+4. Sätt upp de extra tabellerna som behövs enligt instruktioner nedan.
+5. Byt tema (via wp-admin) till `Lysuppsundsvall`.
 5. Sätt upp en sida, namn spelar ingen roll och välj denna som startsida i WordPress-inställningarna.
 6. Genom att välja sidmall (Page Template) för den uppsatta sidan så är sajten antingen i röstnings eller vinnarstadiet.
 
@@ -57,6 +58,8 @@ Bild för exempel:
 ## 2. Funktionsspecifikation
 
 Båda sidmallarna är statiska och inställda efter förra årets bidrag så för att lägga in nya bidrag så kommer det krävas modifikation av dessa filer.
+
+Observera: röstningsfunktionen är satt så varje användare (från Twitter eller Facebook) bara kan lägga en röst så i testningssyfte så måste man gå in i databasen och ändra ``voter` fältet i ``lysupp_votes` eller helt enkelt ta bort raden helt om man vill kunna rösta mer än en gång.
 
 Nedan följer ett exempel på ett bidrag i `vote.php` angående hur det ser ut och hur ska det ska lägas in.
 
@@ -138,7 +141,7 @@ Det är viktigt att alla URL:er stämmer i källkoden. Dessa är nämligen hård
 
 Här är en lista på alla URL referenser i källkoden:
 
-1. Variabel `redir` i fil `main.js:48`
+1. Variabel `redir` i fil `main.js:50`
 2. Sträng i fil `main.js:122`
 3. Sträng i fil `lysupp_vote.php:38`
 4. Sträng i fil `lysupp_vote.php:84`
@@ -148,6 +151,12 @@ Här är en lista på alla URL referenser i källkoden:
 Det kan hända att man kommer behöva ställa om `consumer_key` och `consumer_secret` för Twitter beroende på vad man får för fel.
 
 Dessa är definerade i `lysupp_vote.php` på rad 11, 12 samt 79 och 80.
+
+Det kan också vara så att sidans URL inte är definerad som en callback-URL i Twitter appen.
+
+### Facebook API
+
+Det är viktigt att sidans URL finns definerad i Facebook Appens lista av URL:er annars kommer det inte gå att autensiera användaren för att kunna rösta.
 
 ### 3.3 Databasrelaterade problem
 
