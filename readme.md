@@ -158,6 +158,8 @@ Det kan också vara så att sidans URL inte är definerad som en callback-URL i 
 
 Det är viktigt att sidans URL finns definerad i Facebook Appens lista av URL:er annars kommer det inte gå att autensiera användaren för att kunna rösta.
 
+Precis som för Twitter så behövs det även här autensiering för sin facebook app. Det enda som behövs här är dock `applikation_id`. Detta är definerat i `main.js` på rad 52 och 79.
+
 ### 3.3 Databasrelaterade problem
 
 Se till att våra databaser är uppsatta och att alla bidrag som finns i templates också finns i databasen. Detta gäller om felmeddelandet "Bidraget hittades inte" uppstår när man försöker rösta.
