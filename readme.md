@@ -150,6 +150,8 @@ Här är en lista på alla URL referenser i källkoden:
 
 Det kan hända att man kommer behöva ställa om `consumer_key` och `consumer_secret` för Twitter beroende på vad man får för fel.
 
+Secret key hittas om man loggar in på twitter htttp://apps.twitter.com och måste fyllas i.
+
 Dessa är definerade i `lysupp_vote.php` på rad 11, 12 samt 79 och 80.
 
 Det kan också vara så att sidans URL inte är definerad som en callback-URL i Twitter appen.
