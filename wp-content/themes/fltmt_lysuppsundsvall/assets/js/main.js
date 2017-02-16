@@ -49,7 +49,7 @@
 			var caption = 'Lysuppsundsvall';
 			var redir = 'http://www.lysuppsundsvall.nu';
 			var share_url = 'http://www.lysuppsundsvall.nu';
-			var facebook_appID = '1757952344433527'
+			var facebook_appID = '113148352540493'
 
 			var url = "https://www.facebook.com/dialog/feed?app_id="+facebook_appID+"&link="+encodeURIComponent(share_url)+ 
 				"&name=" + encodeURIComponent(title)+
@@ -76,7 +76,7 @@
 		//Init
 		window.fbAsyncInit = function() {
 			FB.init({
-				appId      : '1757952344433527',
+				appId      : '113148352540493',
 				cookie     : true, 
 				xfbml      : true, 
 				version    : 'v2.2' 

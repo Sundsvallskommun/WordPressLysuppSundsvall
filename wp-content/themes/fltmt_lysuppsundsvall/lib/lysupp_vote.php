@@ -8,8 +8,9 @@
 	add_action('wp_ajax_nopriv_lysupp_vote', 'lysupp_vote');
 
 	function lysupp_vote(){
-		$consumer_key = '7NclIbYeXof2sk4gHNQMRUYsW';
-		$consumer_secret = 'oiSaJhBQG6SiYUVoZATtJo7YX5x7rm4I0xPKrp4s2QtkuHEnE8';
+		$consumer_key = '0mzJPLjhZfxhEu7toglRqgZEt';
+		//Insert secret here
+		$consumer_secret = '';
 
 		if(isset($_POST['id']) && isset($_POST['voter']) && isset($_POST['via'])){
 			$id = $_POST['id'];
@@ -76,8 +77,9 @@
 	}
 
 	function twitter_auth(){
-		$consumer_key = '7NclIbYeXof2sk4gHNQMRUYsW';
-		$consumer_secret = 'oiSaJhBQG6SiYUVoZATtJo7YX5x7rm4I0xPKrp4s2QtkuHEnE8';
+		$consumer_key = '0mzJPLjhZfxhEu7toglRqgZEt';
+		//Insert secret
+		$consumer_secret = '';
 
 		if(isset($_GET['contrib'])){
 			$connection = new TwitterOAuth($consumer_key, $consumer_secret);
